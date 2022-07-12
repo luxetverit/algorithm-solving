@@ -32,10 +32,6 @@ if (num == 1) {
         for (j = 0; j < num - i - 1; j++) {
             result += '*'
         }
-        if (i == num - 2) {
-        } else {
-            result += '\n'
-        }
     }
 }
 
