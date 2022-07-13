@@ -1,5 +1,5 @@
 const fs = require('fs')
-const input = fs.readFileSync('ex.txt').toString()
+const input = fs.readFileSync('ex.txt').toString().trim()
 
 const num = parseInt(input)
 
