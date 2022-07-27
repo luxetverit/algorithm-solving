@@ -8,7 +8,7 @@ const input = fs.readFileSync('ex.txt').toString().split('\n')
 
 let [n, ...arr] = input
 arr = arr.map(v => Number(v))
-let dp = new Array(Number(n)).fill(0)
+let dp = new Array(Number(n)).fill(1)
 
 solution(n, arr)
 
@@ -16,14 +16,15 @@ function solution(n, arr) {
     if (n === 0) console.log(0)
     else if (n === 1) console.log(1)
     else {
-        for (let i = 1; i > n; i++) {
-            dp[i] = 1
+        for (let i = 1; i < n; i++) {
+            const values = [1]
             for (let j = 0; j < i; j++) {
-                if (arr[j] > arr[i]) {
-                    dp[i] = Math.max(dp[i], dp[j] + 1)
+                if (arr[i] > arr[j]) {
+                    values.push(dp[j] + 1)
                 }
             }
+            dp[i] = Math.max(...values)
         }
+        console.log(Math.max(...dp))
     }
-    console.log(Math.max(...dp))
 }
