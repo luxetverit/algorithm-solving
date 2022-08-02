@@ -22,7 +22,7 @@ arr = input.map(v => BigInt(v))
 // a < b 면 -1, a > b면 1, else 0
 arr.sort((a, b) => (a < b ? -1 : a > b ? 1 : 0))
 
-// arr 정렬하고 for문을 돌며 숫자가 같으면 새로운 객체 생성 (map함수 이용)
+// forEach 문으로 각 배열의 요소를 돌며 count
 let count = 1
 let maxValue = arr[0]
 let maxCount = 0
