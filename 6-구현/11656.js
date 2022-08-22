@@ -14,10 +14,12 @@
 
 const fs = require('fs')
 const input = fs.readFileSync('ex.txt').toString().trim().split('')
-console.log(input)
+
+const n = input.length
 let arr = []
-for (let i = 0; i < input.length - 1; i++) {
-    arr[i] = input.splice(i).join('') + '\n'
+
+for (let i = 0; i < n; i++) {
+    arr[i] = input.join('')
+    input.shift()
 }
-let test1 = input.splice(3)
-console.log(test1)
+console.log(arr.sort().join('\n'))
