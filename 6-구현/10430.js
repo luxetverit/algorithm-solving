@@ -4,7 +4,6 @@ const input = fs.readFileSync('ex.txt').toString().trim().split(' ')
 const a = Number(input[0])
 const b = Number(input[1])
 const c = Number(input[2])
-let answer = ''
 
 console.log((a + b) % c)
 console.log(((a % c) + (b % c)) % c)
