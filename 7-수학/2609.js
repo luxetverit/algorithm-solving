@@ -10,13 +10,13 @@
 const fs = require('fs')
 const input = fs.readFileSync('ex.txt').toString().trim().split(' ')
 
-let a = Number(input[0])
-let b = Number(input[1])
+let num1 = Number(input[0])
+let num2 = Number(input[1])
 
-const GCD = (num1, num2) => (num2 > 0 ? GCD(num2, num1 % num2) : num1)
+const GCD = (a, b) => (b > 0 ? GCD(b, a % b) : a)
 
-const gcdVal = GCD(a, b)
-const lcdVal = gcdVal * (a / gcdVal) * (b / gcdVal)
+const gcdVal = GCD(num1, num2)
+const lcdVal = gcdVal * (num1 / gcdVal) * (num2 / gcdVal)
 
 console.log(gcdVal)
 console.log(lcdVal)
