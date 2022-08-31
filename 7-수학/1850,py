@@ -1,0 +1,11 @@
+f = open('ex.txt', 'r')
+num1, num2 = map(int, f.read().split(' '))
+f.close
+
+def getGCD(a,b):
+    if b == 0:
+        return a
+    return getGCD(b, a % b)
+
+tmp = getGCD(num1, num2)
+print("1" * tmp)
