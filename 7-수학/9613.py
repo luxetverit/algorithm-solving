@@ -12,7 +12,23 @@
 
 import sys
 sys.stdin = open("ex.txt","r")
-input = sys.stdin.readlines()
+n = int(sys.stdin.readline().rstrip())
 
+def getGCD(a, b):
+    if (b == 0):
+        return a
+    return getGCD(b, a % b)
 
-print(input)
+for _ in range(n):
+    arr = list(map(int,sys.stdin.readline().split()))
+    k = arr.pop(0)
+    arr.sort(reverse=True)
+    #print(arr)
+    sum = 0
+    for i in range(k):
+        for j in range(i + 1, k):
+            #print(arr[i], arr[j])
+            sum += getGCD(arr[i], arr[j])
+            
+    print(sum)
+
