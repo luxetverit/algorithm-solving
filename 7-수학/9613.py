@@ -13,6 +13,6 @@
 import sys
 sys.stdin = open("ex.txt","r")
 input = sys.stdin.readlines()
-1
+
 
 print(input)
