@@ -7,8 +7,6 @@
 // 출력
 // 한 줄에 하나씩, 증가하는 순서대로 소수를 출력한다.
 
-// 값은 나오나 시간초과 (O(n^2))
-
 const fs = require('fs')
 const input = fs.readFileSync('ex.txt').toString().trim()
 const [n, m] = input.split(' ').map(v => Number(v))
