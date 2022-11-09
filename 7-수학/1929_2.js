@@ -9,7 +9,7 @@
 
 const fs = require('fs')
 const input = fs.readFileSync('ex.txt').toString().trim()
-const [n, m] = input.split(' ').map(v => Number(v))
+const [n, m] = input.split(' ').map((v) => Number(v))
 
 const prime = { 1: true }
 
