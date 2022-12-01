@@ -64,7 +64,6 @@ def bfs(V):
                 queue.append(i)
                 visited_bfs[i] = 1
         
-
 dfs(V)
 print()
 bfs(V)
